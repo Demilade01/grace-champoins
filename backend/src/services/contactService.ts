@@ -14,7 +14,7 @@ export interface ContactResponse {
   timestamp: string;
 }
 
-const SHEET_NAME = 'Contacts'; // The name of the sheet tab in your Google Spreadsheet
+const SHEET_NAME = 'Invitees'; // The name of the sheet tab in your Google Spreadsheet
 
 // Clean phone number (remove spaces, dashes, parentheses)
 const cleanPhone = (phone: string): string => {
