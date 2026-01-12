@@ -122,7 +122,7 @@ export function LandingPage() {
   };
 
   return (
-    <div className="min-h-screen relative overflow-hidden bg-gradient-to-br from-purple-900 via-blue-900 to-purple-800">
+    <div className="min-h-screen relative overflow-hidden bg-linear-to-br from-purple-900 via-blue-900 to-purple-800">
       {/* Animated Background Pattern */}
       <div className="absolute inset-0 opacity-10">
         <div className="absolute inset-0" style={{
@@ -158,7 +158,7 @@ export function LandingPage() {
             <p className="text-base md:text-lg text-green-400 font-semibold tracking-wider uppercase mb-2">
               The Redeemed Christian Church of God
             </p>
-            <div className="h-1 w-40 mx-auto bg-gradient-to-r from-transparent via-red-500 to-transparent rounded-full" />
+            <div className="h-1 w-40 mx-auto bg-linear-to-r from-transparent via-red-500 to-transparent rounded-full" />
           </div>
         </div>
 
@@ -181,7 +181,7 @@ export function LandingPage() {
             <div className="grid grid-cols-1 gap-4">
               <div className="backdrop-blur-xl bg-white/10 border-2 border-green-400/30 rounded-xl p-5 hover:bg-white/15 hover:border-green-400/50 transition-all duration-300 group">
                 <div className="flex items-center gap-4">
-                  <div className="w-14 h-14 bg-green-500 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform flex-shrink-0">
+                  <div className="w-14 h-14 bg-green-500 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform shrink-0">
                     <Users className="w-7 h-7 text-white" />
                   </div>
                   <div className="text-left">
@@ -193,7 +193,7 @@ export function LandingPage() {
 
               <div className="backdrop-blur-xl bg-white/10 border-2 border-purple-400/30 rounded-xl p-5 hover:bg-white/15 hover:border-purple-400/50 transition-all duration-300 group">
                 <div className="flex items-center gap-4">
-                  <div className="w-14 h-14 bg-purple-600 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform flex-shrink-0">
+                  <div className="w-14 h-14 bg-purple-600 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform shrink-0">
                     <Calendar className="w-7 h-7 text-white" />
                   </div>
                   <div className="text-left">
@@ -205,7 +205,7 @@ export function LandingPage() {
 
               <div className="backdrop-blur-xl bg-white/10 border-2 border-red-400/30 rounded-xl p-5 hover:bg-white/15 hover:border-red-400/50 transition-all duration-300 group">
                 <div className="flex items-center gap-4">
-                  <div className="w-14 h-14 bg-red-600 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform flex-shrink-0">
+                  <div className="w-14 h-14 bg-red-600 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform shrink-0">
                     <Heart className="w-7 h-7 text-white" />
                   </div>
                   <div className="text-left">
@@ -235,7 +235,7 @@ export function LandingPage() {
               <CardHeader className="space-y-1 pb-4 border-b-2 border-green-100">
                 <div className="flex items-center justify-between mb-2">
                   <div className="flex items-center gap-2">
-                    <div className="p-2 bg-gradient-to-br from-green-600 to-green-700 rounded-lg shadow-lg">
+                    <div className="p-2 bg-linear-to-br from-green-600 to-green-700 rounded-lg shadow-lg">
                       <Church className="w-5 h-5 text-white" />
                     </div>
                     <div>
@@ -248,7 +248,7 @@ export function LandingPage() {
                     </div>
                   </div>
                 </div>
-                <div className="h-1 w-20 bg-gradient-to-r from-green-600 via-purple-600 to-red-600 rounded-full" />
+                <div className="h-1 w-20 bg-linear-to-r from-green-600 via-purple-600 to-red-600 rounded-full" />
               </CardHeader>
 
               <CardContent className="pt-5">
@@ -309,7 +309,7 @@ export function LandingPage() {
                   <div className="space-y-3 pt-2">
                     <Button
                       type="submit"
-                      className="w-full h-12 text-base font-bold bg-gradient-to-r from-green-600 via-green-700 to-green-600 hover:from-green-500 hover:via-green-600 hover:to-green-500 text-white shadow-lg hover:shadow-xl hover:shadow-green-500/50 transition-all duration-300 border-2 border-white/50"
+                      className="w-full h-12 text-base font-bold bg-linear-to-r from-green-600 via-green-700 to-green-600 hover:from-green-500 hover:via-green-600 hover:to-green-500 text-white shadow-lg hover:shadow-xl hover:shadow-green-500/50 transition-all duration-300 border-2 border-white/50"
                       disabled={isSubmitting}
                     >
                       {isSubmitting ? (
