@@ -5,6 +5,7 @@ import { Input } from './ui/input';
 import { Label } from './ui/label';
 import { Card, CardContent, CardHeader, CardTitle } from './ui/card';
 import { Users, Calendar, Heart, BookOpen, Globe, UserPlus, Loader2, ExternalLink, Church, Mail, Phone, User } from 'lucide-react';
+import { apiClient } from '@/lib/api';
 
 interface ContactFormData {
   name: string;
@@ -25,7 +26,7 @@ export function LandingPage() {
 
   const fetchTotalCount = async () => {
     try {
-      const response = await fetch('/api/contacts/count');
+      const response = await apiClient.get('/api/contacts/count');
       const data = await response.json();
       if (data.success) {
         setTotalCount(data.count);
@@ -65,14 +66,7 @@ export function LandingPage() {
     setIsSubmitting(true);
 
     try {
-      const response = await fetch('/api/contacts', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(formData),
-      });
-
+      const response = await apiClient.post('/api/contacts', formData);
       const data = await response.json();
 
       if (response.ok && data.success) {
@@ -110,7 +104,7 @@ export function LandingPage() {
 
   const handleViewSheet = async () => {
     try {
-      const response = await fetch('/api/contacts/sheet-url');
+      const response = await apiClient.get('/api/contacts/sheet-url');
       const data = await response.json();
       if (data.success && data.url) {
         window.open(data.url, '_blank');
